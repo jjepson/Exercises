@@ -18,7 +18,7 @@ class App extends Component {
 	}
 
   componentWillMount(){
-    /* Set up auth listner */
+    //Set up auth listner
 	fire.auth().onAuthStateChanged(user => {
       if (user) {
         window.localStorage.setItem(fire.storageKey, user.uid);
@@ -45,7 +45,7 @@ class App extends Component {
 const isAuthenticated = () => {
   return !!fire.auth().currentUser || !!localStorage.getItem(storageKey);
 }
-
+//route or redirect based on auth state
 const MatchWhenAuthorized = ({component: Component, ...rest}) => (
 		<Route {...rest} render={renderProps => (
 		isAuthenticated ? (

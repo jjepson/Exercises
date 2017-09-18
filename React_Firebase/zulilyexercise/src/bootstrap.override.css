@@ -184,3 +184,6 @@ H4.pageTitle {
 	font-size:20px;
 	font-weight:bold;
 }
+DIV.table-responsive TABLE.table TBODY TR TD LABEL {
+    position: relative!important;
+}

@@ -148,7 +148,7 @@ window.surveyJSON = {
       },
       {
        "value": "4",
-       "text": "Very Impotant"
+       "text": "Very Important"
       },
       {
        "value": "5",
@@ -188,8 +188,8 @@ window.surveyJSON = {
        "text": "User Friendly Website"
       },
       {
-       "value": "Emial",
-       "text": "Good email communication"
+       "value": "Email",
+       "text": "Email/Text Communication"
       }
      ]
     }

@@ -7,13 +7,9 @@ import firebase from 'firebase'
     storageBucket: "zulilyexercise.appspot.com",
     messagingSenderId: "94861772912"
   };
+  
 var fire = firebase.initializeApp(config);
 
-
-//export const provider = new firebase.auth.AuthProvider();
 export const auth = firebase.auth();
-
-
-
 
 export default fire;

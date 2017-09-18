@@ -34,29 +34,27 @@ class Login extends Component {
         {from && (
           <p></p>
         )}
-	<div className="container mt-20">
-    <div className="row">
-	
-		<div className="col-sm-3 col-sm-offset-3">
-		<div className="alert alert-warning" role="alert">Please log in to continue</div>
-		{this.state.loginError.length > 0 ? <div className="alert alert-danger" role="alert">{this.state.loginError}</div> : ''}
-			<form onSubmit={this.handleSubmit} method="POST">
-			    <div className="form-group">
-			      <label className="control-label" htmlFor="email">Email</label>
-			        <input type="email" id="email" name="email" placeholder="user(#)@test.com" className="form-control" required value={this.state.email} onChange={e => this.setState({email: e.target.value})} />
-			    </div>
-			    <div className="form-group">
-			      <label htmlFor="password">Password</label>
-			        <input type="password" id="password" name="password" placeholder="Password(#)" className="form-control" required value={this.state.password} onChange={e => this.setState({password: e.target.value})} />
-			    </div>
-			    <div className="form-group">
-			        <button className="btn btn-primary">Login</button>
-			    </div>
-			</form>
+		<div className="container mt-20">
+		<div className="row">
+			<div className="col-sm-3 col-sm-offset-3">
+			<div className="alert alert-warning" role="alert">Please log in to continue</div>
+			{this.state.loginError.length > 0 ? <div className="alert alert-danger" role="alert">{this.state.loginError}</div> : ''}
+				<form onSubmit={this.handleSubmit} method="POST">
+					<div className="form-group">
+					  <label className="control-label" htmlFor="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="user(#)@test.com" className="form-control" required value={this.state.email} onChange={e => this.setState({email: e.target.value})} />
+					</div>
+					<div className="form-group">
+					  <label htmlFor="password">Password</label>
+						<input type="password" id="password" name="password" placeholder="Password(#)" className="form-control" required value={this.state.password} onChange={e => this.setState({password: e.target.value})} />
+					</div>
+					<div className="form-group">
+						<button className="btn btn-primary">Login</button>
+					</div>
+				</form>
+			</div>
 		</div>
-	</div>
-</div>
-	
+		</div>
       </section>
     );
   }

@@ -8,19 +8,23 @@ import './surveyJSON.js';
 class SurveyPage extends Component {
    
    constructor(props) {
-	   
+	//Set up survey   
 	Survey.Survey.cssType = "bootstrap";
 	Survey.defaultBootstrapCss.navigationButton = "btn btn-default";
     super(props);
 	this.surveyCss =  {
     "row": "questionRow",
 	"pageTitle": "pageTitle",
+	"row": "table-responsive",
 	"question": {
 					"title": "questionTitle"
 				},
 	"panel": 	{
 					"title": "panelTitle",
 					"container": "panelContainer"
+				},	
+	"matrix": 	{
+					"root": "table"
 				},				
 	};
 	this.surveyModel = new Survey.Model(window.surveyJSON);
@@ -32,6 +36,7 @@ class SurveyPage extends Component {
   }
   
   componentWillMount(){
+	  //Set up auth listner
 	  fire.auth().onAuthStateChanged(user => {
 			  if (user) {
 				var _this = this;
@@ -47,6 +52,7 @@ class SurveyPage extends Component {
 		});
   }
   
+  //Iterates through results to determine the last completed page
   getPageNumberFromData(data) {
 	  var pageNum = 0;
 	  var maxPage = 0;
