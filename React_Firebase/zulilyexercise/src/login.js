@@ -8,14 +8,18 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
+	loginError: '',
     redirectToReferrer: false
   }
 
   handleSubmit = (evt) => {
     evt.preventDefault();
+	var _this = this;
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then(() => {
-      this.setState({redirectToReferrer: true});
-    });
+	  this.setState({redirectToReferrer: true});
+    }).catch(function(error) {
+		_this.setState({loginError: error.message});
+	});
   }
 
   render() {
@@ -35,6 +39,7 @@ class Login extends Component {
 	
 		<div className="col-sm-3 col-sm-offset-3">
 		<div className="alert alert-warning" role="alert">Please log in to continue</div>
+		{this.state.loginError.length > 0 ? <div className="alert alert-danger" role="alert">{this.state.loginError}</div> : ''}
 			<form onSubmit={this.handleSubmit} method="POST">
 			    <div className="form-group">
 			      <label className="control-label" htmlFor="email">Email</label>

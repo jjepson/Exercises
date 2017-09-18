@@ -1,0 +1,330 @@
+{
+ "cookieName": "SurveyCompleted",
+ "loadingHtml": "Loading...",
+ "pages": [
+  {
+   "elements": [
+    {
+     "type": "checkbox",
+     "choices": [
+      {
+       "value": "FamilyFun",
+       "text": "Family Fun"
+      },
+      "Sports",
+      "Fashion",
+      {
+       "value": "HomeImprovement",
+       "text": "Home Improvement"
+      },
+      {
+       "value": "OutdoorActivities",
+       "text": "Outdoor Activitites"
+      },
+      {
+       "value": "FurryFriends",
+       "text": "Furry Friends"
+      },
+      "Entertaining",
+      "Electronics",
+      {
+       "value": "FoodAndDrink",
+       "text": "Food & Drink"
+      }
+     ],
+     "colCount": 2,
+     "isRequired": true,
+     "name": "Which of these categories interest you?"
+    },
+    {
+     "type": "checkbox",
+     "choices": [
+      {
+       "value": "LatestTrends",
+       "text": "Latest Trends"
+      },
+      "Sporty",
+      {
+       "value": "BusinessCasual",
+       "text": "Business Casual"
+      },
+      "Artistic",
+      "Retro",
+      "Edgy",
+      "Formal",
+      "Comfortable"
+     ],
+     "colCount": 2,
+     "isRequired": true,
+     "name": "How would you describe your personal style?"
+    }
+   ],
+   "name": "page1",
+   "title": "Tell Us A Little About Yourself"
+  },
+  {
+   "elements": [
+    {
+     "type": "checkbox",
+     "choices": [
+      "Clothing",
+      "Shoes",
+      "Housewares",
+      "Electronics",
+      {
+       "value": "HealthAndBeauty",
+       "text": "Health & Beauty"
+      },
+      {
+       "value": "PetSupplies",
+       "text": "Pet Supplies"
+      },
+      {
+       "value": "HomeImprovement",
+       "text": "Home Improvement"
+      },
+      {
+       "value": "SeasonalItems",
+       "text": "Seasonal Items"
+      }
+     ],
+     "colCount": 2,
+     "isRequired": true,
+     "name": "What Items do you usually purchase online?"
+    },
+    {
+     "type": "radiogroup",
+     "choices": [
+      "Daily",
+      {
+       "value": "1-2PerWeek",
+       "text": "1-2 Times Per Week"
+      },
+      {
+       "value": "1-2PerMonth",
+       "text": "1-2 Times Per Month"
+      },
+      {
+       "value": "1-3PerYear",
+       "text": "3-4 Times Per Year"
+      },
+      {
+       "value": "4-6PerYear",
+       "text": "4-6 Times Per Year"
+      },
+      {
+       "value": "7-10PerYear",
+       "text": "7-10 Time Per Year"
+      }
+     ],
+     "colCount": 2,
+     "name": "How often do you make online purchases?"
+    }
+   ],
+   "name": "page2",
+   "title": "How Do You Shop Online?"
+  },
+  {
+   "elements": [
+    {
+     "type": "matrix",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Not Important"
+      },
+      {
+       "value": "2",
+       "text": "Slightly Important"
+      },
+      {
+       "value": "3",
+       "text": "Moderately Important"
+      },
+      {
+       "value": "4",
+       "text": "Very Impotant"
+      },
+      {
+       "value": "5",
+       "text": "Necessary"
+      }
+     ],
+     "name": "When making a purchase online, which of these are important to you?",
+     "rows": [
+      {
+       "value": "Security",
+       "text": "Sense of Security"
+      },
+      {
+       "value": "Value",
+       "text": "Product Value"
+      },
+      {
+       "value": "ShippingCost",
+       "text": "Shipping Cost"
+      },
+      {
+       "value": "Returns",
+       "text": "Return Policy"
+      },
+      {
+       "value": "OrderProcessing",
+       "text": "Order Processing Speed"
+      },
+      {
+       "value": "Quality",
+       "text": "Product Quality"
+      },
+      {
+       "value": "UserFriendly",
+       "text": "User Friendly Website"
+      },
+      {
+       "value": "Emial",
+       "text": "Good email communication"
+      }
+     ]
+    }
+   ],
+   "name": "page3",
+   "title": "What Is Important To You?"
+  },
+  {
+   "elements": [
+    {
+     "type": "matrix",
+     "columns": [
+      {
+       "value": "1",
+       "text": "Needs Improvment"
+      },
+      {
+       "value": "2",
+       "text": "About Average"
+      },
+      {
+       "value": "3",
+       "text": "Above Average"
+      },
+      {
+       "value": "4",
+       "text": "Excellent"
+      }
+     ],
+     "name": "What is your initial perception of Zulily in the areas below?",
+     "rows": [
+      {
+       "value": "Security",
+       "text": "Sense of Security"
+      },
+      {
+       "value": "Value",
+       "text": "Product Value"
+      },
+      {
+       "value": "ShippingCost",
+       "text": "Shipping Cost"
+      },
+      {
+       "value": "Returns",
+       "text": "Return Policy"
+      },
+      {
+       "value": "OrderProcessing",
+       "text": "Order Processing Speed"
+      },
+      {
+       "value": "Quality",
+       "text": "Product Quality"
+      },
+      {
+       "value": "UserFriendly",
+       "text": "User Friendly Website"
+      },
+      {
+       "value": "Emial",
+       "text": "Good email communication"
+      }
+     ]
+    }
+   ],
+   "name": "page4",
+   "title": "How Are We Doing?"
+  },
+  {
+   "elements": [
+    {
+     "type": "radiogroup",
+     "choices": [
+      "Yes",
+      "No"
+     ],
+     "isRequired": true,
+     "name": "notifications",
+     "title": "Would you like to set up email/text notifications?"
+    },
+    {
+     "type": "checkbox",
+     "choices": [
+      {
+       "value": "ItemsPurchasedSale",
+       "text": "Items I've Purchased Go On Sale"
+      },
+      {
+       "value": "ItemsCartSale",
+       "text": "Items I've Put Into My Cart Go On Sale"
+      },
+      {
+       "value": "NewItemsInterests",
+       "text": "New Items are Added That Match My Interests"
+      },
+      {
+       "value": "NewCategoriesAdded",
+       "text": "New Categories are Added"
+      },
+      {
+       "value": "SpecialEventsPromos",
+       "text": "Special Events & Promotions"
+      }
+     ],
+     "colCount": 2,
+     "name": "Notify Me By Email When:",
+     "visible": false,
+     "visibleIf": "{notifications} = 'Yes'"
+    },
+    {
+     "type": "checkbox",
+     "choices": [
+      {
+       "value": "ItemsPurchasedSale",
+       "text": "Items I've Purchased Go On Sale"
+      },
+      {
+       "value": "ItemsCartSale",
+       "text": "Items I've Put Into My Cart Go On Sale"
+      },
+      {
+       "value": "NewItemsInterests",
+       "text": "New Items are Added That Match My Interests"
+      },
+      {
+       "value": "NewCategoriesAdded",
+       "text": "New Categories are Added"
+      },
+      {
+       "value": "SpecialEventsPromos",
+       "text": "Special Events & Promotions"
+      }
+     ],
+     "colCount": 2,
+     "name": "Notify Me By Text When:",
+     "visible": false,
+     "visibleIf": "{notifications} = 'Yes'"
+    }
+   ],
+   "name": "page5",
+   "title": "Notification Preferences"
+  }
+ ]
+}

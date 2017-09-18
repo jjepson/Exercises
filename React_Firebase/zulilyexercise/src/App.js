@@ -35,7 +35,7 @@ class App extends Component {
 	 <BrowserRouter>
 		<Switch>
         <Route exact path='/' component={login} />
-		<MatchWhenAuthorized pattern="survey" component={survey} />
+		<MatchWhenAuthorized path="/survey" component={survey} />
 		</Switch>
       </BrowserRouter>
     );

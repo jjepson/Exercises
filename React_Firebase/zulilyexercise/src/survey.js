@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import * as Survey from 'survey-react';
 import fire from './fire';
 import { withRouter } from 'react-router';
+import './bootstrap.override.css';
+import './surveyJSON.js';
 
 class SurveyPage extends Component {
    
@@ -10,18 +12,18 @@ class SurveyPage extends Component {
 	Survey.Survey.cssType = "bootstrap";
 	Survey.defaultBootstrapCss.navigationButton = "btn btn-default";
     super(props);
-	this.surveyModel = new Survey.Model({ cookieName: "SurveyCompleted", focusFirstQuestionAutomatic: true, title: "Tell us, what technologies do you use?", pages: [
-					  { name:"page1", questions: [ 
-						  { type: "radiogroup", choices: [ "Yes", "No" ], isRequired: true, name: "frameworkUsing",title: "Do you use any front-end framework like Bootstrap?" },
-						  { type: "checkbox", choices: ["Bootstrap","Foundation"], hasOther: true, isRequired: true, name: "framework", title: "What front-end framework do you use?", visibleIf: "{frameworkUsing} = 'Yes'" }
-					   ]},
-					  { name: "page2", questions: [
-						{ type: "radiogroup", choices: ["Yes","No"],isRequired: true, name: "mvvmUsing", title: "Do you use any MVVM framework?" },
-						{ type: "checkbox", choices: [ "AngularJS", "KnockoutJS", "React" ], hasOther: true, isRequired: true, name: "mvvm", title: "What MVVM framework do you use?", visibleIf: "{mvvmUsing} = 'Yes'" } ] },
-					  { name: "page3",questions: [
-						{ type: "comment", name: "about", title: "Please tell us about your main requirements for Survey library" } ] }
-					 ]
-					});
+	this.surveyCss =  {
+    "row": "questionRow",
+	"pageTitle": "pageTitle",
+	"question": {
+					"title": "questionTitle"
+				},
+	"panel": 	{
+					"title": "panelTitle",
+					"container": "panelContainer"
+				},				
+	};
+	this.surveyModel = new Survey.Model(window.surveyJSON);
 	this.surveyModel.showProgressBar = 'bottom';
 	this.surveyModel.completedHtml = '<div class="alert alert-success" role="alert">Thank you for completing the survey!</div>';
     this.state = {
@@ -47,12 +49,19 @@ class SurveyPage extends Component {
   
   getPageNumberFromData(data) {
 	  var pageNum = 0;
-	  var page = this.surveyModel.getPageByQuestion(this.surveyModel.getQuestionByName(Object.keys(data).slice(-1)[0]));
-	  if(page != null)
+	  var maxPage = 0;
+	  for(var key in data)
 	  {
-		  pageNum = page.visibleIndex+1;
+		  var page = this.surveyModel.getPageByQuestion(this.surveyModel.getQuestionByName(key));
+		  if(page != null)
+		  {
+			  pageNum = page.visibleIndex+1;
+			  if(pageNum > maxPage) {
+				  maxPage =  pageNum;
+			  }
+		  }
 	  }
-	  return pageNum;
+	  return maxPage;
   }
   
   saveSurvey(survey){
@@ -62,7 +71,7 @@ class SurveyPage extends Component {
   render() {
 		return (<div className="container mt-20">
 				<div className="row">
-					<div className="col-sm-6 col-sm-offset-2">< Survey.Survey model ={this.surveyModel} onCurrentPageChanged={this.saveSurvey} onComplete={this.saveSurvey} />
+					<div className="col-sm-6 col-sm-offset-2">< Survey.Survey model ={this.surveyModel} css={this.surveyCss} onCurrentPageChanged={this.saveSurvey} onComplete={this.saveSurvey} />
 					</div>
 				</div>
 			  </div>);

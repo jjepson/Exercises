@@ -162,3 +162,25 @@ hr {
 
 .ml-50 {
   margin-left: 50px; }
+  
+ /*Survey Styles */ 
+ h5.questionTitle {
+    margin: 30px 0 20px 0;
+    font-size: 16px;
+	font-weight: bold;
+}
+
+DIV#sq_page .progress {
+    margin: 15px 0px!important;
+    width: 100%!important;
+}
+
+DIV.questionRow {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+}
+
+H4.pageTitle {
+	font-size:20px;
+	font-weight:bold;
+}
