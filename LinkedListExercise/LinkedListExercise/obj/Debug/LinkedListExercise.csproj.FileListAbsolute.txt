@@ -1,0 +1,4 @@
+C:\Code\LinkedListExercise\LinkedListExercise\bin\Debug\LinkedListExercise.dll
+C:\Code\LinkedListExercise\LinkedListExercise\bin\Debug\LinkedListExercise.pdb
+C:\Code\LinkedListExercise\LinkedListExercise\obj\Debug\LinkedListExercise.dll
+C:\Code\LinkedListExercise\LinkedListExercise\obj\Debug\LinkedListExercise.pdb

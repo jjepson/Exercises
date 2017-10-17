@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListExercise", "LinkedListExercise\LinkedListExercise.csproj", "{EE19E2B1-4839-4979-86FC-2ECE52506B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListExcerciseTest", "LinkedListExcerciseTest\LinkedListExcerciseTest.csproj", "{A294E632-D95E-4FC8-95D1-F186B8E60EB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4F7FB48C-052F-4529-B65D-D056199738BD}"
+	ProjectSection(SolutionItems) = preProject
+		LinkedListExercise.vsmdi = LinkedListExercise.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = LinkedListExercise.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE19E2B1-4839-4979-86FC-2ECE52506B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE19E2B1-4839-4979-86FC-2ECE52506B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE19E2B1-4839-4979-86FC-2ECE52506B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE19E2B1-4839-4979-86FC-2ECE52506B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A294E632-D95E-4FC8-95D1-F186B8E60EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A294E632-D95E-4FC8-95D1-F186B8E60EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A294E632-D95E-4FC8-95D1-F186B8E60EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A294E632-D95E-4FC8-95D1-F186B8E60EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

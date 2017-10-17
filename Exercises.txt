@@ -1,0 +1,77 @@
+Given a string, print out all possible variations of upper and lower case. 
+
+Reverse a sentance but not the words.
+?
+0
+?
+public String splitAtSpaces(String input){
+    String output = new String();
+    String[] temp = input.split(" ");
+    for(int x =temp.length;x>0;x--){
+        output+=x==temp.length?temp[x-1]:" "+temp[x-1];
+    }
+
+    return output;
+}
+
+
+blackjack and combinatorial question?
+
+Card (with value + enum clubs/diamonds/hearts/spades)
+Deck (List of Cards + method shuffle and getFirst)
+Player (with name + method doNextMove that return enum Action - getNewCard or Stop)
+Game (with N Players, 1 Deck, iterate over Players, foreach Player iterate over their doNextMove until they die or they decide to stop)
+At the end, evaluate each Player sum and declare winner.
+
+Develop a scalable twitter feed filter system which builds a public sentiment every minute.  
+
+Design the database model for movie ticketing system.  
+
+Spiral printing of 2D array 
+
+How to pick largest 100 elements from an extremely large data set ?  
+
+
+
+
+	
+No Offer
+Negative Experience
+Difficult Interview
+Application
+I applied online. I interviewed at zulily in August 2016.
+Interview
+I got a mail from their recruiting team saying "....As the first stage of the application process, you have to complete a tech evaluation, comprising of coding questions...."
+The evaluation (on edrepublic.com) had 2 coding questions. I think there was no time limit (well, at least I didn't see any clock ticking, maybe they had a way to internally record the time spent, I don't know).
+Interview Questions
+Problem Statement:
+Consider a social website SocialX, where friends connect to each other, just as they do on Facebook
+Friendship on SocialX is symmetric (if X is a friend of Z, then Z is also a friend of X) however not transient (if X and Z are friends and Z and Y are friends, then X and Y are not necessarily friends)
+
+The term "k-joined" is defined as follows. If two people are friends, they are called 1-joined. For k >= 1, two people X and Z are called (k+1)-joined if X and Z are k-joined, or if there exists a person Y such that X and Y are k-joined and Y and Z are friends.
+
+"Approachable Score" is defined as follows. If two people X and Z are not friends, then their Approachable Score is the fewest number of people (other than themselves) who must be removed from the network in order for X and Z to not be 3-joined. The higher the Approachable Score, the more likely it is that X and Z know each other.
+
+Given a set of friends containing exactly K elements, where K is the number of people in the network. People are numbered from 0 to K-1. The j-th character of the i-th element of friends is '1' if i and j are friends, and '0' otherwise. Return the Approachable Score for personX and personZ
+________________________________________
+Constraints
+Set of friends will contain exactly K (1 < K < 41) elements, where each element will contain exactly K characters. Each character will either be '0' or '1'
+friends[i][j] will always be equal to friends[j][i] and friends[i][i] will always be equal to 0
+friend[personX][personZ] will be equal to 0 and personX will never be equal to personZ
+________________________________________
+Input Format
+Line 1: comma separated K elements representing friends
+Line 2: Integer representing personX
+Line 3: Integer representing personZ
+________________________________________
+Output Format
+Integer representing Approachable Score
+________________________________________
+Sample Input
+0100,1010,0101,0010
+0
+3
+Sample Output
+1
+Explanation
+Either remove person 1 or person 2 to get an Approachable Score of 1 for person 0 and 3  

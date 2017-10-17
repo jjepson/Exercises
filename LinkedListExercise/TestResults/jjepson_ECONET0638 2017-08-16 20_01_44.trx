@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1d641586-f059-42c6-a6bf-60a832b243a4" name="jjepson@ECONET0638 2017-08-16 20:01:44" runUser="UNIVERA\jjepson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="67aa6120-b7cb-4834-b9e9-fdcf8b6bc7e9">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="jjepson_ECONET0638 2017-08-16 20_01_44">
+      <DeploymentItem filename="C:\Code\LinkedListExercise\LinkedListExercise\bin\Debug\LinkedListExercise.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2017-08-16T20:01:44.5529249-07:00" queuing="2017-08-16T20:01:45.3173361-07:00" start="2017-08-16T20:01:45.4000688-07:00" finish="2017-08-16T20:02:08.0632171-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNonIntersection" storage="c:\code\linkedlistexercise\linkedlistexcercisetest\bin\debug\linkedlistexcercisetest.dll" id="bc7cb6a9-4b5d-b07f-2c7a-4865df13def5">
+      <Execution id="eca9f975-3dd4-47ca-a7fc-2908adc1b0e3" />
+      <TestMethod codeBase="C:/Code/LinkedListExercise/LinkedListExcerciseTest/bin/Debug/LinkedListExcerciseTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="LinkedListExcerciseTest.LinkedListTest, LinkedListExcerciseTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNonIntersection" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="bc7cb6a9-4b5d-b07f-2c7a-4865df13def5" executionId="eca9f975-3dd4-47ca-a7fc-2908adc1b0e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="eca9f975-3dd4-47ca-a7fc-2908adc1b0e3" testId="bc7cb6a9-4b5d-b07f-2c7a-4865df13def5" testName="TestNonIntersection" computerName="ECONET0638" duration="00:00:21.2412973" startTime="2017-08-16T20:01:45.5666844-07:00" endTime="2017-08-16T20:02:08.0086960-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eca9f975-3dd4-47ca-a7fc-2908adc1b0e3">
+    </UnitTestResult>
+  </Results>
+</TestRun>
