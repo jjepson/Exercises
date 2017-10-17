@@ -88,18 +88,30 @@ export class MyPetsScreen extends React.Component {
       <List>
       <FlatList
         data={this.state.data}
+        keyExtractor={item => item.email}
         ItemSeparatorComponent={this.renderSeparator}
         ListHeaderComponent={this.renderHeader}
         ListFooterComponent={this.renderFooter}
         renderItem={({ item }) => (
-          <ListItem
-            roundAvatar
+          /*<ListItem
+            roundAvatar={false}
+            containerStyle= {styles.container}
+            avatarStyle ={styles.avatar}
             title={`${item.name.first} ${item.name.last}`}
             subtitle={item.email}
             avatar={{ uri: item.picture.thumbnail }}
             keyExtractor={item => item.email}
 
-          />
+          />*/
+          <View style={{flex: 1, flexDirection: 'row', backgroundColor:'#EEE'}}>
+          <View>
+          <Image style={styles.avatar}
+          source={{ uri: item.picture.large }}
+          /></View>
+          <View><Text style={styles.title}>{item.name.first} {item.name.last}</Text>
+          <Text style={styles.subTitle}>{item.location.city},{item.location.state}</Text>
+          <Text style={styles.info}>{item.login.username}</Text>
+          </View></View>
         )}
       />
     </List>
@@ -111,5 +123,28 @@ const styles = StyleSheet.create({
     icon: {
       width: 24,
       height: 24,
+    },
+    avatar: {
+        width: 150,
+        height: 150,
+        marginRight: 20,
+        marginBottom: 10,
+        marginTop: 10,
+        borderRadius: 5,
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 10,
+      marginTop: 10,
+    },
+    subTitle: {
+      fontSize: 14,
+      fontWeight: 'bold',
+      marginBottom: 5,
+    },
+    info: {
+      fontSize: 12,
+      fontWeight: 'bold',
     },
   });
