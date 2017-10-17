@@ -1,0 +1,7 @@
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\obj\Debug\LinkedListExcerciseTest.csprojResolveAssemblyReference.cache
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\bin\Debug\LinkedListExcerciseTest.dll
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\bin\Debug\LinkedListExcerciseTest.pdb
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\bin\Debug\LinkedListExercise.dll
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\bin\Debug\LinkedListExercise.pdb
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\obj\Debug\LinkedListExcerciseTest.dll
+C:\Code\LinkedListExercise\LinkedListExcerciseTest\obj\Debug\LinkedListExcerciseTest.pdb
