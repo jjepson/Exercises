@@ -10,7 +10,7 @@ export class MyPetsScreen extends React.Component {
     // Note: By default the icon is only shown on iOS. Search the showIcon option below.
     tabBarIcon: ({ tintColor }) => (
       <Image
-        source={require('./chats-icon.png')}
+        source={require('./paw.png')}
         style={[styles.icon, {tintColor: tintColor}]}
       />
     ),
@@ -52,17 +52,13 @@ export class MyPetsScreen extends React.Component {
       });
   };
 
-  /* loadPetDetails = (petId) => {
-    this.props.navigation.navigate('Profile', { petId: petId })
-  } */
-
   renderSeparator = () => {
     return (
       <View
         style={{
           height: 1,
           width: "100%",
-          backgroundColor: "#7f8c8d"
+          backgroundColor: "#d35400"
         }}
       />
     );
@@ -123,7 +119,11 @@ export class MyPetsScreen extends React.Component {
           <Text style={styles.title}>{item.name.first} {item.name.last}</Text>
           <Text style={styles.subTitle}>{item.location.city},{item.location.state}</Text>
           <Text style={styles.info}>Austrailian Cattle Dog / Blue Heeler</Text>
-          <Text style={styles.info}>Male, Baby, Small</Text>
+          <View style={styles.attributes}>
+          <View><Text style={styles.attribute}>Female</Text></View>
+          <View><Text style={styles.attribute}>Adult</Text></View>
+          <View><Text style={styles.attribute}>Xtra Large</Text></View>
+          </View>
           </View>
           </View>
           </TouchableHighlight>
@@ -140,14 +140,31 @@ const imageHeight = Math.round(imageWidth * 3 / 4);
 
 const styles = StyleSheet.create({
     canvas: {
-      padding: 5,
+      padding: 3,
       flex: 1, 
       flexDirection: 'row', 
       backgroundColor:'#ecf0f1'
     },
+    attributes: {
+      flex: 1, 
+      flexDirection: 'row', 
+    },
+    attribute: {
+      marginRight: 5,
+      marginTop: 10,
+      paddingTop: 4,
+      paddingBottom: 4,
+      paddingLeft: 5,
+      paddingRight: 5,
+      borderWidth: 1,
+      borderColor: "#f39c12",
+      borderRadius: 2,
+      backgroundColor: "#e67e22",
+      color: "#ffffff"
+    },
     icon: {
-      width: 24,
-      height: 24,
+      width: 28,
+      height: 28,
     },
     avatar: {
         width: imageWidth,
@@ -171,7 +188,7 @@ const styles = StyleSheet.create({
       marginBottom: 5,
     },
     info: {
-      fontSize: 12,
+      fontSize: 10,
       fontWeight: 'bold',
     },
   });

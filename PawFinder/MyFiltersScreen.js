@@ -17,10 +17,11 @@ export class MyFiltersScreen extends React.Component {
   
   static navigationOptions = {
     title: "Pet Search",
-    tabBarLabel: 'Filters',
+    tabBarLabel: 'Pet Search',
+    tintColor: '#d35400',
     tabBarIcon: ({ tintColor }) => (
       <Image
-        source={require('./notif-icon.png')}
+        source={require('./search.png')}
         style={[styles.icon, {tintColor: tintColor}]}
       />
     ),
@@ -174,7 +175,7 @@ export class MyFiltersScreen extends React.Component {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 24,
-    height: 24,
+    width: 28,
+    height: 28,
   },
 });

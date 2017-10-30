@@ -17,6 +17,12 @@ const MyApp = TabNavigator({
   Filters: {
     screen: MyFiltersScreen,
   },
+},
+  {
+    animationEnabled: true,
+    tabBarOptions: {
+      activeTintColor: '#d35400',
+    },
 });
 
 const ModalStack = StackNavigator({
