@@ -1,0 +1,14 @@
+correct Toolbar Icons
+load petsscreen from API
+Wire search form to pets screen API Call
+wire search form to pets screen title
+gender, size, age icons/styles
+scroll to load more pets
+footer loading icon
+header ?
+search button styling
+postal code validation
+
+pet detail layout
+multiple images?  
+

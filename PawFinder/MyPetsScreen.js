@@ -1,9 +1,11 @@
 import React from 'react';
-import {StyleSheet, Button, Image, View, Text, FlatList, ActivityIndicator} from 'react-native';
+import {Dimensions, StyleSheet, Button, Image, View, Text, FlatList, ActivityIndicator, TouchableHighlight} from 'react-native';
 import { List, ListItem } from "react-native-elements";
+
 
 export class MyPetsScreen extends React.Component {
   static navigationOptions = {
+    title: "Available Pets",
     tabBarLabel: 'Pets',
     // Note: By default the icon is only shown on iOS. Search the showIcon option below.
     tabBarIcon: ({ tintColor }) => (
@@ -50,21 +52,27 @@ export class MyPetsScreen extends React.Component {
       });
   };
 
+  /* loadPetDetails = (petId) => {
+    this.props.navigation.navigate('Profile', { petId: petId })
+  } */
+
   renderSeparator = () => {
     return (
       <View
         style={{
           height: 1,
-          width: "86%",
-          backgroundColor: "#CED0CE",
-          marginLeft: "14%"
+          width: "100%",
+          backgroundColor: "#7f8c8d"
         }}
       />
     );
   };
 
   renderHeader = () => {
-    return <Text>PAWFINDER!</Text>;
+    return <View style={{backgroundColor: '#7f8c8d'}}>
+      <Text style={{color: "#ecf0f1", fontFamily: 'Thonburi',fontSize: 30,padding: 20, paddingLeft: 5, textAlign: "center"}}>PawFinder</Text>
+      </View>;
+
   };
 
   renderFooter = () => {
@@ -75,7 +83,7 @@ export class MyPetsScreen extends React.Component {
         style={{
           paddingVertical: 20,
           borderTopWidth: 1,
-          borderColor: "#CED0CE"
+          borderColor: "#34495e"
         }}
       >
         <ActivityIndicator animating size="large" />
@@ -85,55 +93,74 @@ export class MyPetsScreen extends React.Component {
 
   render() {
     return (
-      <List>
-      <FlatList
+      <FlatList 
         data={this.state.data}
         keyExtractor={item => item.email}
         ItemSeparatorComponent={this.renderSeparator}
-        ListHeaderComponent={this.renderHeader}
+        /*ListHeaderComponent={this.renderHeader}*/
         ListFooterComponent={this.renderFooter}
         renderItem={({ item }) => (
-          /*<ListItem
+         /*  <ListItem
             roundAvatar={false}
-            containerStyle= {styles.container}
-            avatarStyle ={styles.avatar}
             title={`${item.name.first} ${item.name.last}`}
             subtitle={item.email}
             avatar={{ uri: item.picture.thumbnail }}
             keyExtractor={item => item.email}
-
+            onPress = {() => {this.props.navigation.navigate('Profile', { petId: item.id })}}
           />*/
-          <View style={{flex: 1, flexDirection: 'row', backgroundColor:'#EEE'}}>
+          <TouchableHighlight
+          onPress = {() => {this.props.navigation.navigate('Profile', { petId: item.email })}}
+          >
+         <View
+          style={styles.canvas}>
           <View>
           <Image style={styles.avatar}
           source={{ uri: item.picture.large }}
-          /></View>
-          <View><Text style={styles.title}>{item.name.first} {item.name.last}</Text>
+          resizeMode = "cover"
+          />
+          </View>
+          <View>
+          <Text style={styles.title}>{item.name.first} {item.name.last}</Text>
           <Text style={styles.subTitle}>{item.location.city},{item.location.state}</Text>
-          <Text style={styles.info}>{item.login.username}</Text>
-          </View></View>
+          <Text style={styles.info}>Austrailian Cattle Dog / Blue Heeler</Text>
+          <Text style={styles.info}>Male, Baby, Small</Text>
+          </View>
+          </View>
+          </TouchableHighlight>
         )}
       />
-    </List>
     );
   }
 }
 
+const dimensions = Dimensions.get('window');
+const imageWidth = Math.round(dimensions.width * .33);
+const imageHeight = Math.round(imageWidth * 3 / 4);
+
+
 const styles = StyleSheet.create({
+    canvas: {
+      padding: 5,
+      flex: 1, 
+      flexDirection: 'row', 
+      backgroundColor:'#ecf0f1'
+    },
     icon: {
       width: 24,
       height: 24,
     },
     avatar: {
-        width: 150,
-        height: 150,
-        marginRight: 20,
+        width: imageWidth,
+        height: imageHeight,
         marginBottom: 10,
         marginTop: 10,
-        borderRadius: 5,
+        marginLeft: 5,
+        borderRadius: 2,
+        marginRight: 10
     },
     title: {
-      fontSize: 24,
+      fontFamily: "HelveticaNeue-Light",
+      fontSize: 28,
       fontWeight: 'bold',
       marginBottom: 10,
       marginTop: 10,

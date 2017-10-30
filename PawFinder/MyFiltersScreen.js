@@ -16,6 +16,7 @@ export class MyFiltersScreen extends React.Component {
   }
   
   static navigationOptions = {
+    title: "Pet Search",
     tabBarLabel: 'Filters',
     tabBarIcon: ({ tintColor }) => (
       <Image
